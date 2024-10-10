@@ -7,3 +7,54 @@
 html{
   font-size:62.5%
 }
+
+.Dictionary-conatiner{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  background-color: darkorange;
+  width: 89%;
+  margin: 1.2rem auto;
+  box-shadow: 0 0 3rem;
+  border-radius: .7rem;
+}
+
+.Dictionary-conatiner h2{
+  margin-top:3rem;
+  text-transform: uppercase;
+  font-size:2rem;
+}
+
+.Dictionary-conatiner p{
+  font-size:1.8rem;
+  text-transform: capitalize;
+}
+form{
+  margin-bottom:1.9rem;
+  gap:.5rem;
+}
+input {
+  padding:1.4rem;
+  width: 30rem;
+  font-size: 1.4rem;
+}
+
+button {
+  padding:1.4rem;
+  width: 15rem;
+  border-radius: 5px;
+  background-color: blueviolet;
+  text-transform: uppercase;
+  font-size:1.4rem;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover{
+  background-color:blue;
+  transition: .5s;
+  cursor: pointer;
+}

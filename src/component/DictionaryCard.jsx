@@ -1,9 +1,8 @@
-import { useState } from 'react';
-import Words from './Words';
-
+import useStore from "../store/dictionaryStore"; 
+import DictionaryImage from '../assets/dictionary.png'
 
 function DictionaryCard() {
-    const [word, setWord] = useState("");
+    const setWord = useStore((state) => state.setWord); 
 
     const handleSearch = (e) => {
         e.preventDefault(); 
@@ -12,18 +11,16 @@ function DictionaryCard() {
     };
 
     return (
-      <div className="Dictionary-container-card">
-          <div className="Dictionary-container ">
-          <h2 className="title">Created by Lucy Wambui</h2>
-          <p className="text-area">Type a word to find its meaning</p>
-          <form onSubmit={handleSearch}>
-              <input type="text" id="dictionaryWord" placeholder="dictionary word" />
-              <button type="submit">Search</button>
-          </form>
-          </div>
-          <Words word={word} />
-      </div>
-    )
+        <div className="Dictionary-container">
+            <h2 className="title">Dictionary Word by Lucy Wambui</h2>
+            <img src={DictionaryImage} alt="" />
+            <p className="text-area">Type a word to find its meaning</p>
+            <form onSubmit={handleSearch}>
+                <input type="text" id="dictionaryWord" placeholder="dictionary word" />
+                <button type="submit">Search</button>
+            </form>
+        </div>
+    );
 }
 
 export default DictionaryCard;

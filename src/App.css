@@ -15,20 +15,23 @@ html{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 3rem;
+  gap: 2rem;
   background-color: darkorange;
-  width: 89%;
+  width: 100%;
   margin:auto;
   box-shadow: 0 0 3rem;
   border-radius: .7rem;
 }
 
 .Dictionary-container h2{
-  margin-top:3rem;
+  margin-top:1.5rem;
   text-transform: uppercase;
   font-size:2rem;
 }
 
+.Dictionary-container img{
+  width: 8rem;
+}
 .Dictionary-container p{
   font-size:1.8rem;
   text-transform: capitalize;
@@ -66,12 +69,13 @@ button:hover{
   align-items: center;
   display: flex;
   flex-wrap: wrap;
-  box-shadow: 0 0 3rem;
+  box-shadow: 0 0 1.9rem;
   width: 60rem;
   border-radius: .6rem;
 }
 
 .data-container h2{
+  text-align: center;
   font-size:2rem;
   text-transform: capitalize;
   margin-top: 2rem;
@@ -79,6 +83,20 @@ button:hover{
 }
 
 .data-container p{
-  margin:2rem 0;
+ justify-content: center;
+  margin:2rem ;
   font-size: 1.7rem;
+}
+.loading-card{
+  text-align: center;
+  font-size:1.7rem;
+  margin-top: 1.1rem;
+}
+
+.error-card{
+  text-align: center;
+  font-size:1.8rem;
+  margin-top: 1.1rem;
+  color: coral;
+  text-transform: capitalize;
 }

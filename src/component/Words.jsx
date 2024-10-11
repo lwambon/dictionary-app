@@ -1,10 +1,13 @@
 import { useQuery } from 'react-query';
+import useStore from '../store/dictionaryStore';
 
-function Words({ word }) {
+function Words() {
+    const word = useStore((state) => state.word);
+
     const { data, error, isLoading } = useQuery(["allWords", word], async function () {
         const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`);
         if (!response.ok) {
-            throw new Error('Word not found');
+            throw new Error('Word not found!!');
         }
         const result = await response.json();
         return result;
@@ -12,8 +15,8 @@ function Words({ word }) {
         enabled: !!word 
     });
 
-    if (isLoading) return <p>Loading...</p>;
-    if (error) return <p>{error.message}</p>;
+    if (isLoading) return <p className="loading-card">Loading...</p>;
+    if (error) return <p className="error-card">{error.message}</p>;
 
     return (
         <div className="data-container">

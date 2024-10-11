@@ -5,10 +5,11 @@
 }
 
 html{
-  font-size:62.5%
+  font-size:62.5%;
+  font-family:sans-serif;
 }
 
-.Dictionary-conatiner{
+.Dictionary-container{
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -17,18 +18,18 @@ html{
   gap: 3rem;
   background-color: darkorange;
   width: 89%;
-  margin: 1.2rem auto;
+  margin:auto;
   box-shadow: 0 0 3rem;
   border-radius: .7rem;
 }
 
-.Dictionary-conatiner h2{
+.Dictionary-container h2{
   margin-top:3rem;
   text-transform: uppercase;
   font-size:2rem;
 }
 
-.Dictionary-conatiner p{
+.Dictionary-container p{
   font-size:1.8rem;
   text-transform: capitalize;
 }
@@ -57,4 +58,27 @@ button:hover{
   background-color:blue;
   transition: .5s;
   cursor: pointer;
+}
+
+.data-container{
+  margin:3rem auto;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: 0 0 3rem;
+  width: 60rem;
+  border-radius: .6rem;
+}
+
+.data-container h2{
+  font-size:2rem;
+  text-transform: capitalize;
+  margin-top: 2rem;
+  color: crimson;
+}
+
+.data-container p{
+  margin:2rem 0;
+  font-size: 1.7rem;
 }

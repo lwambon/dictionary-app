@@ -69,8 +69,7 @@ button:hover{
   align-items: center;
   display: flex;
   flex-wrap: wrap;
-  box-shadow: 0 0 1.9rem;
-  width: 60rem;
+  width: 70rem;
   border-radius: .6rem;
 }
 
